@@ -10,8 +10,8 @@ export default defineConfig({
         target: 'https://script.google.com',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/macros/s/AKfycbwumHzWVD_DMkIDUe-7QWpZTIOftlyjSPSb85ojfil11VCIxkVQGTMeFdHsqsE3XY4Z/exec'),
-        configure: (proxy, options) => {
-          proxy.on('proxyRes', (proxyRes, req, res) => {
+        configure: (proxy, ) => {
+          proxy.on('proxyRes', (proxyRes,) => {
             // Remove redirects and handle them manually
             if (proxyRes.statusCode === 302 || proxyRes.statusCode === 301) {
               proxyRes.statusCode = 200;

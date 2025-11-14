@@ -55,7 +55,7 @@ export default function BootcampRegister() {
           (e.currentTarget as HTMLFormElement).reset();
         }
       })
-      .catch((err) => {
+      .catch(() => {
         // Network error, but since we know data is being stored, show success
         setSubmitMsg('Registration successful!');
         window.location.hash = '#/apply/success';

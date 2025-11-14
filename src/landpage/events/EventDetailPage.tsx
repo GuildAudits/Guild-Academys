@@ -54,7 +54,7 @@ export default function EventDetailPage({ slug }: { slug: string }) {
           window.location.hash = '#/apply/success'
         }
       })
-      .catch((err) => {
+      .catch(() => {
         // Network error, but since we know data is being stored, show success
         setSubmitMsg('Registration successful!')
         ;(e.currentTarget as HTMLFormElement).reset()
