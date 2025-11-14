@@ -100,21 +100,21 @@ export default function EventDetailPage({ slug }: { slug: string }) {
           <span className="text-neutral-900 font-medium">{event.title}</span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-6 lg:gap-10">
           <div className="space-y-6">
             <div>
-              <h1 className="text-[32px] leading-[1.15] font-bold text-neutral-900 mb-3">{event.title}</h1>
-              <p className="text-[15px] leading-relaxed text-neutral-600 mb-4">
+              <h1 className="text-[32px] leading-[1.15] font-bold text-neutral-900 mb-3 dark:text-white">{event.title}</h1>
+              <p className="text-[15px] leading-relaxed text-neutral-600 mb-4 dark:text-neutral-300">
                 Level up your skills in [key area] and connect with industry experts. Designed for [target audience, e.g., aspiring developers, UX enthusiasts]. Guild Academy presents an interactive and beginner‑friendly bootcamp designed to introduce students, tech enthusiasts, and aspiring developers to the core principles and practical skills of the decentralized web.
               </p>
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-8 w-8 rounded-full  flex items-center justify-center">
                   <img src={Ellipse} alt="Guild Academy" className="h-6 w-6 rounded-full" />
                 </div>
-                <span className="text-sm text-neutral-700">Guild Academy</span>
+                <span className="text-sm text-neutral-700 dark:text-white">Guild Academy</span>
               </div>
-              <div className="flex items-center gap-3 text-xs text-neutral-600">
-                <span className="inline-flex items-center gap-1.5 bg-neutral-100 px-3 py-1.5 rounded-full">
+              <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-600">
+                <span className="inline-flex items-center gap-1.5 bg-neutral-100 px-3 py-1.5 rounded-full dark:bg-neutral-700 dark:text-white">
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
                     <line x1="16" y1="2" x2="16" y2="6"/>
@@ -123,7 +123,7 @@ export default function EventDetailPage({ slug }: { slug: string }) {
                   </svg>
                   {event.date} • {event.time}
                 </span>
-                <span className="inline-flex items-center gap-1.5 bg-neutral-100 px-3 py-1.5 rounded-full">
+                <span className="inline-flex items-center gap-1.5 bg-neutral-100 px-3 py-1.5 rounded-full dark:bg-neutral-700 dark:text-white">
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                     <circle cx="12" cy="10" r="3"/>
@@ -144,83 +144,83 @@ export default function EventDetailPage({ slug }: { slug: string }) {
         {/* Content sections */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-2 space-y-6">
-            <div className="bg-white border border-neutral-200 rounded-2xl p-6">
-              <h2 className="text-base font-semibold text-neutral-900">Event Overview</h2>
-              <div className="my-4 border-t border-neutral-200" />
+            <div className={`rounded-2xl border shadow-md p-4 sm:p-6 ${isDark ? 'bg-transparent border-neutral-800' : 'bg-white border-neutral-200'}`}>
+              <h2 className="text-base font-semibold text-neutral-900 dark:text-white">Event Overview</h2>
+              <div className="my-4 border-t border-neutral-800" />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6">
                 <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-neutral-500 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-neutral-500 dark:text-neutral-400 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
                     <line x1="16" y1="2" x2="16" y2="6"/>
                     <line x1="8" y1="2" x2="8" y2="6"/>
                     <line x1="3" y1="10" x2="21" y2="10"/>
                   </svg>
                   <div>
-                    <div className="text-sm text-neutral-900">{event.date} | {event.time}</div>
-                    <div className="text-xs text-neutral-500">Start date</div>
+                    <div className="text-sm text-neutral-900 dark:text-white">{event.date} | {event.time}</div>
+                    <div className="text-xs text-neutral-500 dark:text-white">Start date</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-neutral-500 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-neutral-500 mt-0.5 dark:text-neutral-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
                     <line x1="16" y1="2" x2="16" y2="6"/>
                     <line x1="8" y1="2" x2="8" y2="6"/>
                     <line x1="3" y1="10" x2="21" y2="10"/>
                   </svg>
                   <div>
-                    <div className="text-sm text-neutral-900">{event.date} | {event.time}</div>
-                    <div className="text-xs text-neutral-500">End date</div>
+                    <div className="text-sm text-neutral-900 dark:text-white">{event.date} | {event.time}</div>
+                    <div className="text-xs text-neutral-500 dark:text-white">End date</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-neutral-500 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-neutral-500 mt-0.5 dark:text-neutral-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                     <circle cx="12" cy="10" r="3"/>
                   </svg>
                   <div>
-                    <div className="text-sm text-neutral-900">The Innovation Hub, Lagos</div>
-                    <div className="text-xs text-neutral-500">Venue</div>
+                    <div className="text-sm text-neutral-900 dark:text-white">The Innovation Hub, Lagos</div>
+                    <div className="text-xs text-neutral-500 dark:text-white">Venue</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-neutral-500 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-neutral-500 mt-0.5 dark:text-neutral-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                     <circle cx="12" cy="10" r="3"/>
                   </svg>
                   <div>
-                    <div className="text-sm text-neutral-900">132 Persons</div>
-                    <div className="text-xs text-neutral-500">Event size</div>
+                    <div className="text-sm text-neutral-900 dark:text-white">132 Persons</div>
+                    <div className="text-xs text-neutral-500 dark:text-white">Event size</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-neutral-500 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-neutral-500 mt-0.5 dark:text-neutral-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path d="M2 8c2 0 2-3 4-3s2 3 4 3 2-3 4-3 2 3 4 3 2-3 4-3"/>
                   </svg>
                   <div>
-                    <div className="text-sm text-neutral-900">In Person, Virtual</div>
-                    <div className="text-xs text-neutral-500">Event type</div>
+                    <div className="text-sm text-neutral-900 dark:text-white">In Person, Virtual</div>
+                    <div className="text-xs text-neutral-500 dark:text-white">Event type</div>
                   </div>
                 </div>
               </div>
-              <div className="mt-4 border-t border-neutral-200" />
-              <h3 className="mt-4 text-base font-semibold text-neutral-900">Program Schedule</h3>
+              <div className="mt-4 border-t border-neutral-800 dark:text-white" />
+              <h3 className="mt-4 text-base font-semibold text-neutral-900 dark:text-white">Program Schedule</h3>
               <ul className="mt-3 space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-neutral-500 w-28 shrink-0">Gate Open</span><span className="text-neutral-900">- 10:00 AM - 11:00 AM</span></li>
-                <li className="flex items-start gap-2"><span className="text-neutral-500 w-28 shrink-0">Event start time</span><span className="text-neutral-900">- 10:00 AM</span></li>
-                <li className="flex items-start gap-2"><span className="text-neutral-500 w-28 shrink-0">Break time</span><span className="text-neutral-900">- 12:00 PM</span></li>
-                <li className="flex items-start gap-2"><span className="text-neutral-500 w-28 shrink-0">End time</span><span className="text-neutral-900">- 12:00 PM</span></li>
+                <li className="flex items-start gap-2"><span className="text-neutral-500 dark:text-neutral-400 w-24 sm:w-28 shrink-0 dark:text-white">Gate Open</span><span className="text-neutral-900 dark:text-white">- 10:00 AM - 11:00 AM</span></li>
+                <li className="flex items-start gap-2"><span className="text-neutral-500 w-28 shrink-0 dark:text-white">Event start time</span><span className="text-neutral-900 dark:text-white">- 10:00 AM</span></li>
+                <li className="flex items-start gap-2"><span className="text-neutral-500 w-28 shrink-0 dark:text-white">Break time</span><span className="text-neutral-900 dark:text-white">- 12:00 PM</span></li>
+                <li className="flex items-start gap-2"><span className="text-neutral-500 w-28 shrink-0 dark:text-white">End time</span><span className="text-neutral-900 dark:text-white">- 12:00 PM</span></li>
               </ul>
             </div>
 
-            <div className="bg-white border border-neutral-200 rounded-2xl p-6">
-              <h2 className="text-base font-semibold text-neutral-900">Event details</h2>
-              <div className="my-4 border-t border-neutral-200" />
-              <p className="text-[15px] leading-relaxed text-neutral-600">
+            <div className={`rounded-2xl border shadow-md p-6 ${isDark ? 'bg-transparent border-neutral-800' : 'bg-white border-neutral-200'}`}>
+              <h2 className="text-base font-semibold text-neutral-900 dark:text-white">Event details</h2>
+              <div className="my-4 border-t border-neutral-800" />
+              <p className="text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-300">
                 Unlock the next level of your tech journey by diving into the world of Web3, blockchain, and decentralized applications. Guild Academy presents an interactive and beginner‑friendly bootcamp designed to introduce students, tech enthusiasts, and aspiring developers to the core principles and practical skills of the decentralized web.
               </p>
 
-              <h3 className="mt-6 text-base font-semibold text-neutral-900">What you will learn?</h3>
-              <ul className="mt-3 space-y-2 text-[15px] text-neutral-800">
+              <h3 className="mt-6 text-base font-semibold text-neutral-900 dark:text-white">What you will learn?</h3>
+              <ul className="mt-3 space-y-2 text-[15px] text-neutral-800 dark:text-neutral-200">
                 {[
                   'What is Web3? (Overview & Opportunities)',
                   'Introduction to Blockchain Technology',
@@ -238,8 +238,8 @@ export default function EventDetailPage({ slug }: { slug: string }) {
                 ))}
               </ul>
 
-              <h3 className="mt-6 text-base font-semibold text-neutral-900">Who should attend?</h3>
-              <ul className="mt-3 list-disc pl-5 space-y-1 text-sm text-neutral-700">
+              <h3 className="mt-6 text-base font-semibold text-neutral-900 dark:text-white">Who should attend?</h3>
+              <ul className="mt-3 list-disc pl-5 space-y-1 text-sm text-neutral-700 dark:text-neutral-300">
                 <li>Students (Secondary/University)</li>
                 <li>Beginners in tech</li>
                 <li>Creatives looking to explore Web3</li>
@@ -247,9 +247,9 @@ export default function EventDetailPage({ slug }: { slug: string }) {
               </ul>
             </div>
 
-            <div className="bg-white border border-neutral-200 rounded-2xl p-6">
-              <h2 className="text-base font-semibold text-neutral-900">Event speakers</h2>
-              <div className="my-4 border-t border-neutral-200" />
+            <div className={`rounded-2xl border shadow-md p-6 ${isDark ? 'bg-transparent border-neutral-800' : 'bg-white border-neutral-200'}`}>
+              <h2 className="text-base font-semibold text-neutral-900 dark:text-white">Event speakers</h2>
+              <div className="my-4 border-t border-neutral-800" />
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {[
                   { name: 'Adaeze Okonkwo', role: 'Blockchain Developer & Educator, ChainUp Africa' },
@@ -258,20 +258,20 @@ export default function EventDetailPage({ slug }: { slug: string }) {
                 ].map((speaker, i) => (
                   <div
                     key={i}
-                    className="rounded-2xl border border-neutral-200 p-6 text-center bg-white"
+                    className={`rounded-2xl border shadow-md p-6 text-center ${isDark ? 'bg-transparent border-neutral-800' : 'bg-white border-neutral-200'}`}
                   >
                     <div className="flex justify-center items-center">
                       <img src={Like} alt="Guild Academy" className=" " />
                     </div>
-                    <div className="text-base font-medium text-neutral-900">{speaker.name}</div>
-                    <div className="text-xs text-neutral-500 mt-1 leading-snug">{speaker.role}</div>
+                    <div className="text-base font-medium text-neutral-900 dark:text-white">{speaker.name}</div>
+                    <div className="text-xs text-neutral-500 dark:text-neutral-400 mt-1 leading-snug">{speaker.role}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-white border border-neutral-200 rounded-2xl p-6">
-              <h2 className="text-base font-semibold text-neutral-900 mb-4">Event Location</h2>
+            <div className={`rounded-2xl border shadow-md p-6 ${isDark ? 'bg-transparent border-neutral-800' : 'bg-white border-neutral-200'}`}>
+              <h2 className="text-base font-semibold text-neutral-900 mb-4 dark:text-white">Event Location</h2>
               <div className="rounded-xl overflow-hidden border border-neutral-200 mb-3">
                 <iframe
                   title="Event location map"
@@ -299,21 +299,21 @@ export default function EventDetailPage({ slug }: { slug: string }) {
           {/* Right Aside */}
           <aside className="space-y-6">
             <div className="sticky top-6">
-              <div className="bg-white border border-neutral-200 rounded-2xl p-6 mb-6">
-                <h3 className="text-base font-semibold text-neutral-900">Registration</h3>
+              <div className={`rounded-2xl border shadow-md p-6 mb-6 ${isDark ? 'bg-transparent border-neutral-800' : 'bg-white border-neutral-200'}`}>
+                <h3 className="text-base font-semibold text-neutral-900 dark:text-white">Registration</h3>
                 <div className="mt-3 mb-4 border-t border-neutral-200" />
                 <form className="space-y-4" onSubmit={handleEventRegister}>
                   <div className="space-y-1.5">
-                    <label className="block text-sm text-neutral-800">First name <span className="text-red-500">*</span></label>
-                    <input name="firstName" type="text" required aria-required="true" placeholder="Enter your text" className="w-full px-4 py-3 text-sm border border-neutral-200 rounded-full placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" />
+                    <label className="block text-sm text-neutral-800 dark:text-white">First name <span className="text-red-500">*</span></label>
+                    <input name="firstName" type="text" required aria-required="true" placeholder="Enter your text" className="w-full px-4 py-3 text-sm border border-neutral-200 rounded-full placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-neutral-800 dark:border-neutral-700 dark:text-white" />
                   </div>
                   <div className="space-y-1.5">
-                    <label className="block text-sm text-neutral-800">Last name <span className="text-red-500">*</span></label>
-                    <input name="lastName" type="text" required aria-required="true" placeholder="Enter your text" className="w-full px-4 py-3 text-sm border border-neutral-200 rounded-full placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" />
+                    <label className="block text-sm text-neutral-800 dark:text-white">Last name <span className="text-red-500">*</span></label>
+                    <input name="lastName" type="text" required aria-required="true" placeholder="Enter your text" className="w-full px-4 py-3 text-sm border border-neutral-200 rounded-full placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-neutral-800 dark:border-neutral-700 dark:text-white" />
                   </div>
                   <div className="space-y-1.5">
-                    <label className="block text-sm text-neutral-800">Email Address <span className="text-red-500">*</span></label>
-                    <input name="email" type="email" required aria-required="true" placeholder="Enter your text" className="w-full px-4 py-3 text-sm border border-neutral-200 rounded-full placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" />
+                    <label className="block text-sm text-neutral-800 dark:text-white">Email Address <span className="text-red-500">*</span></label>
+                    <input name="email" type="email" required aria-required="true" placeholder="Enter your text" className="w-full px-4 py-3 text-sm border border-neutral-200 rounded-full placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-neutral-800 dark:border-neutral-700 dark:text-white" />
                   </div>
                   <button type="submit" disabled={submitting} className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-green-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-700 transition-colors disabled:opacity-70">
                     {submitting ? 'Submitting...' : 'Register event'}
@@ -321,13 +321,13 @@ export default function EventDetailPage({ slug }: { slug: string }) {
                   </button>
                 </form>
                 {submitMsg && (
-                  <p className="mt-3 text-xs text-neutral-600">{submitMsg}</p>
+                  <p className="mt-3 text-xs text-neutral-600 dark:text-neutral-300">{submitMsg}</p>
                 )}
               </div>
 
-              <div className="bg-white border border-neutral-200 rounded-2xl p-6">
-                <h3 className="text-base font-semibold text-neutral-900 mb-2">About</h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">Guild Academy hosts community-driven events and workshops for aspiring builders and professionals.</p>
+              <div className="bg-white border border-neutral-200 rounded-2xl p-6 dark:bg-transparent dark:border-neutral-800  ">
+                <h3 className="text-base font-semibold text-neutral-900  mb-2 dark:text-white">About</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">Guild Academy hosts community-driven events and workshops for aspiring builders and professionals.</p>
               </div>
             </div>
           </aside>

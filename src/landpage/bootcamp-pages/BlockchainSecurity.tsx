@@ -14,6 +14,8 @@ import Rect49 from '../../assets/landing/Bootcamp/Rectangle 49.png'
 import Rect49b from '../../assets/landing/Bootcamp/Rectangle 49 (1).png'
 import CompaniesSection from '../common/CompaniesSection'
 import PartnerCompanies from '../PartnerCompanies'
+import hand1 from '../../assets/landing/see.png'
+
 
 export default function BlockchainSecurity() {
   const { isDark } = useTheme()
@@ -105,7 +107,7 @@ export default function BlockchainSecurity() {
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden">
-            <img src={heroImg} alt="Program" className="w-full h-auto" />
+            <img src={hand1} alt="Program" className="w-full h-auto" />
           </div>
         </div>
       </div>

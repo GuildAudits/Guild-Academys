@@ -12,6 +12,8 @@ import Rect47b from '../../assets/landing/Bootcamp/Rectangle 47 (1).png'
 import Rect48 from '../../assets/landing/Bootcamp/Rectangle 48.png'
 import Rect49 from '../../assets/landing/Bootcamp/Rectangle 49.png'
 import Rect49b from '../../assets/landing/Bootcamp/Rectangle 49 (1).png'
+import hand2 from '../../assets/landing/hand.png'
+
 
 export default function Web3ProtocolEngineering() {
   const { isDark } = useTheme()
@@ -81,7 +83,7 @@ export default function Web3ProtocolEngineering() {
 
           <div className="hidden lg:block">
             <div className="rounded-[40px] overflow-hidden max-w-md ml-auto">
-              <img src={heroImg} alt="Web3 Protocol" className="w-full h-auto" />
+              <img src={hand2} alt="Web3 Protocol" className="w-full h-auto" />
             </div>
           </div>
         </div>

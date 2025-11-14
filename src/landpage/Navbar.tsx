@@ -4,12 +4,17 @@ import logo from '../assets/landing/Logo.png'
 import Facebook from '../assets/landing/Facebook.png'
 import Instagram from '../assets/landing/insta.png'
 import LinkedIn from '../assets/landing/Linkdin.png'
+import { Link } from 'react-router-dom'
 
-const Logo = () => (
-  <div className="flex items-center gap-2">
+const Logo = ({ onClick }: { onClick?: () => void }) => (
+  <Link
+    to="/"
+    onClick={onClick}
+    className="flex items-center gap-2 no-underline hover:no-underline focus:no-underline active:no-underline"
+  >
     <img src={logo} alt="Logo" />
-    <span className="text-2xl font-bold text-black dark:text-white font-outfit">Guild Academy</span>
-  </div>
+    <span className="text-2xl font-bold text-black dark:text-white">Guild Academy</span>
+  </Link>
 )
 
 const ThemeButton = ({ isDark, onToggle }: { isDark: boolean; onToggle: () => void }) => {
@@ -86,7 +91,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => (window.location.hash = '#/bootcamps')}
-              className="hidden md:inline-flex items-center justify-center rounded-full border border-green-600 bg-white px-5 py-2 text-sm font-semibold text-green-600 shadow-sm transition-colors hover:bg-green-50"
+              className="hidden md:inline-flex items-center justify-center rounded-full border bg-green-600 border-green-600  px-5 py-2 text-sm font-semibold text-white shadow-sm "
             >
               Join Bootcamp
             </button>
@@ -118,7 +123,7 @@ export default function Navbar() {
         <div className={`fixed inset-0 z-50 ${isDark ? 'bg-black' : 'bg-white'} px-6 pb-6`}> 
           {/* Top bar */}
           <div className="flex items-center justify-between py-4">
-            <Logo />
+            <Logo onClick={() => setOpen(false)} />
             <div className="flex items-center gap-2">
               <ThemeButton isDark={isDark} onToggle={toggleTheme} />
               <button

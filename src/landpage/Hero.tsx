@@ -62,7 +62,7 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => (window.location.hash = '#/bootcamps')}
-              className="inline-flex items-center gap-2 rounded-full border border-green-600 bg-white px-6 py-3 text-sm font-semibold text-green-600 shadow-sm transition-colors hover:bg-green-50"
+              className="inline-flex items-center gap-2 rounded-full border border-green-600 bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm "
             >
               Join Bootcamp
               <span aria-hidden>➜</span>

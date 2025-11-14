@@ -113,7 +113,7 @@ export default function AboutPage() {
 
         {/* Soft tiles */}
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="rounded-2xl border border-green-100 bg-green-50 p-5">
+          <div className={`rounded-2xl border p-5 ${isDark ? 'bg-transparent border-neutral-800' : 'bg-green-50 border-green-100'}`}>
             <div className="flex  flex-col items-start gap-3">
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-green-600 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path d="M10 2a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8Zm1 11H9v-1h2Zm0-3H9V5h2Z"/></svg>
@@ -124,7 +124,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-          <div className="rounded-2xl border border-green-100 bg-green-50 p-5">
+          <div className={`rounded-2xl border p-5 ${isDark ? 'bg-transparent border-neutral-800' : 'bg-green-50 border-green-100'}`}>
             <div className="flex flex-col items-start gap-3">
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-green-600 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path d="M10 2 2 6l8 4 8-4-8-4Zm8 6-8 4v6l8-4V8Zm-18 0v6l8 4v-6L0 8Z"/></svg>
@@ -135,7 +135,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-          <div className="rounded-2xl border border-green-100 bg-green-50 p-5">
+          <div className={`rounded-2xl border p-5 ${isDark ? 'bg-transparent border-neutral-800' : 'bg-green-50 border-green-100'}`}>
             <div className="flex flex-col items-start gap-3">
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-green-600 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path fill-rule="evenodd" d="M10 2a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8ZM7 9a3 3 0 1 0 3 3 3 3 0 0 0-3-3Zm6.5 5.5a4.5 4.5 0 0 0-2.27-3.93 5 5 0 1 1-4.46 0A4.5 4.5 0 0 0 13.5 14.5Z" clip-rule="evenodd"/></svg>

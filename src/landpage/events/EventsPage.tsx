@@ -93,10 +93,10 @@ export default function EventsPage() {
           {getAllEvents().map((ev) => (
             <article
               key={ev.slug}
-              className={`rounded-2xl border p-4 sm:p-5 ${isDark ? 'border-neutral-800 bg-black' : 'border-neutral-200 bg-white'} flex gap-4 shadow-sm hover:shadow transition-shadow`}
+              className={`${isDark ? 'border-neutral-800 bg-black' : 'border-neutral-200 bg-white'} grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-4 rounded-2xl border p-4 sm:p-5 shadow-sm transition-shadow hover:shadow`}
             >
-              <div className="">
-                <img src={ev.cover} alt={ev.title} className="w-[200px] h-[200px]" />
+              <div className="overflow-hidden rounded-xl sm:h-[200px] sm:w-[200px]">
+                <img src={ev.cover} alt={ev.title} className="h-40 w-full sm:h-full sm:w-full object-cover" />
               </div>
               <div className="min-w-0 flex-1">
                 {/* Top meta row */}
@@ -121,7 +121,7 @@ export default function EventsPage() {
                 </div>
 
                 {/* Footer row: organizer + button */}
-                <div className="mt-5 flex items-center justify-between gap-3">
+                <div className="mt-5 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
                   <div className="flex items-center gap-2">
                     <img src={Ellipse} alt="Guild Academy" className="h-6 w-6 rounded-full" />
                     <span className={`${isDark ? 'text-neutral-300' : 'text-neutral-700'} text-xs`}>Guild Academy</span>
@@ -129,9 +129,7 @@ export default function EventsPage() {
                   <button
                     type="button"
                     onClick={() => (window.location.hash = `#/events/${ev.slug}`)}
-                    className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-semibold shadow-sm ${
-                      isDark ? 'bg-[#101010] border border-neutral-800 text-white hover:bg-[#141414]' : 'bg-white border border-neutral-200 text-neutral-800 hover:bg-neutral-50'
-                    }`}
+                    className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-semibold shadow-sm w-fit ${isDark ? 'bg-[#101010] border border-neutral-800 text-white hover:bg-[#141414]' : 'bg-white border border-neutral-200 text-neutral-800 hover:bg-neutral-50'}`}
                   >
                     Event detail
                     <span aria-hidden>➜</span>
