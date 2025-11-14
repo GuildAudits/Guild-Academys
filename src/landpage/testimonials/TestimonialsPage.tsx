@@ -12,7 +12,6 @@ export default function TestimonialsPage() {
         <div className="text-center">
           {/* Breadcrumb */}
           <div className={`mb-2 inline-flex items-center gap-2 text-xs`}>
-            <span className={`${isDark ? 'text-neutral-400' : 'text-neutral-500'}`} aria-hidden>🏠</span>
             <button
               type="button"
               onClick={() => (window.location.hash = '#/')}

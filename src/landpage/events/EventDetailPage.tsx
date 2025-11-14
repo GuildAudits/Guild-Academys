@@ -19,6 +19,7 @@ export default function EventDetailPage({ slug }: { slug: string }) {
     e.preventDefault()
     setSubmitting(true)
     setSubmitMsg(null)
+    window.location.hash = '#/apply/success'
     try {
       const form = new FormData(e.currentTarget)
       const body = {

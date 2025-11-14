@@ -70,7 +70,6 @@ export default function EventsPage() {
         {/* Header */}
         <div className="text-center">
           <div className={`mb-2 inline-flex items-center gap-2 text-xs`}>
-            <span className={`${isDark ? 'text-neutral-400' : 'text-neutral-500'}`}>🏠</span>
             <button type="button" onClick={() => (window.location.hash = '#/')} className={`${isDark ? 'text-neutral-400' : 'text-neutral-500'} underline-offset-2 hover:underline`}>
               Home
             </button>
